@@ -2,13 +2,13 @@ macro_not_eq: macro_not_eq{
 compatible = "zmk,behavior-macro";
 label = "macro_not_eq";
 #binding-cells = <0>;
-bindings = <&kp EXCL> <&kp EQUAL>;
+bindings = <&kp EXCL>, <&kp EQUAL>;
 };
 macro_eq_comp: macro_eq_comp{
 compatible = "zmk,behavior-macro";
 label = "macro_eq_comp";
 #binding-cells = <0>;
-bindings = <&kp EQUAL> <&kp EQUAL>;
+bindings = <&kp EQUAL>, <&kp EQUAL>;
 };
 macro_nvim: macro_nvim{
 compatible = "zmk,behavior-macro";
