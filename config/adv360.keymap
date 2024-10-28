@@ -14,8 +14,8 @@
 
 
 #define default_layer 0
-#define layer_Navigation 1
-#define layer_Symbols 2
+#define layer_Symbols 1
+#define layer_Navigation 2
 #define layer_keypad 3
 #define layer_mod 4
 #define layer_mac 5
