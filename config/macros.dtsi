@@ -1,3 +1,9 @@
+macro_nvim: macro_nvim{
+compatible = "zmk,behavior-macro";
+label = "macro_nvim";
+#binding-cells = <0>;
+bindings = <&kp N>, <&kp V>, <&kp I>, <&kp M>, <&kp SPACE>, <&kp PERIOD>;
+};
 macro_if_err: macro_if_err{
 compatible = "zmk,behavior-macro";
 label = "macro_if_err";
