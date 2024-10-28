@@ -30,7 +30,13 @@
   behaviors {
     #include "macros.dtsi"
     #include "version.dtsi"
-
+    bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };    
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -50,9 +56,9 @@
             bindings = <
              &kp GRAVE     &kp N1      &kp N2    &kp N3     &kp N4  &kp N5                 &tog 4                                                                            &mo layer_mod  &kp N6         &kp N7          &kp N8           &kp N9         &kp N0       &kp MINUS
              &kp ESC      &kp Q       &kp W     &kp E      &kp R   &kp T              &key_repeat                                                                            &tog 3   &kp Y          &kp U           &kp I            &kp O          &kp P        &kp BSLH
-             &kp TAB      &kp A       &kp S     &kp D      &kp F   &kp G            &macro_if_err  &macro_super  &kp LEFT_ALT                 &macro_backward  &macro_forward   &none   &kp H          &kp J           &kp K            &kp L       &kp SEMI         &kp SQT
+             &kp TAB      &kp A       &kp S     &kp D      &kp F   &kp G            &macro_if_err  &macro_super  &kp LEFT_ALT                 &macro_back  &macro_forward   &none   &kp H          &kp J           &kp K            &kp L       &kp SEMI         &kp SQT
            &kp LSHFT      &kp Z       &kp X     &kp C      &kp V   &kp B                                         &kp LEFT_GUI                 &key_repeat                           &kp N          &kp M       &kp COMMA          &kp DOT       &kp FSLH       &kp RSHFT
-      &mt LCTRL LPAR  &kp GRAVE  &kp K_CUT  &kp K_COPY  &kp K_PASTE                      &mo 1     &kp SPACE     &kp ENTER                      &kp DEL   &kp BACKSPACE   &mo 2          &macro_quotes  &macro_dquotes  &macro_brackets  &macro_braces  &mt RCTRL RPAR
+      &mt LCTRL LPAR  &kp GRAVE  &kp K_CUT  &kp K_COPY  &kp K_PASTE                      &mo 1     &kp SPACE     &kp ENTER                    &kp LEFT_GUI   &kp bspc_del   &mo 2          &macro_quotes  &macro_dquotes  &macro_brackets  &macro_braces  &mt RCTRL RPAR
             >;
         };        
 
@@ -81,9 +87,9 @@ layer_mac {
             bindings = <
              &kp GRAVE     &kp N1      &kp N2    &kp N3     &kp N4  &kp N5                 &tog 4                                                                           &mo layer_mod  &kp N6         &kp N7          &kp N8           &kp N9         &kp N0       &kp MINUS
              &kp ESC      &kp Q       &kp W     &kp E      &kp R   &kp T              &key_repeat                                                                            &tog 0   &kp Y          &kp U           &kp I            &kp O          &kp P        &kp BSLH
-             &kp TAB      &kp A       &kp S     &kp D      &kp F   &kp G            &macro_if_err  &macro_super  &kp LEFT_ALT                 &kp LCTRL  &macro_forward   &none   &kp H          &kp J           &kp K            &kp L       &kp SEMI         &kp SQT
-           &kp LSHFT      &kp Z       &kp X     &kp C      &kp V   &kp B                                         &kp LEFT_GUI             &macro_spotlight                           &kp N          &kp M       &kp COMMA          &kp DOT       &kp FSLH       &kp RSHFT
-      &mt LGUI LPAR  &kp GRAVE  &kp K_CUT  &kp K_COPY  &kp K_PASTE                      &mo 1     &kp SPACE     &kp ENTER                      &kp DEL   &kp BACKSPACE   &mo 2          &macro_quotes  &macro_dquotes  &macro_brackets  &macro_braces  &mt LGUI RPAR
+             &kp TAB      &kp A       &kp S     &kp D      &kp F   &kp G            &macro_if_err  &macro_super  &kp LEFT_ALT                 &macro_back  &macro_forward   &none   &kp H          &kp J           &kp K            &kp L       &kp SEMI         &kp SQT
+           &kp LSHFT      &kp Z       &kp X     &kp C      &kp V   &kp B                                         &kp LCTRL                    &macro_spotlight                           &kp N          &kp M       &kp COMMA          &kp DOT       &kp FSLH       &kp RSHFT
+      &mt LGUI LPAR  &kp GRAVE  &kp K_CUT  &kp K_COPY  &kp K_PASTE                      &mo 1     &kp SPACE      &kp ENTER                    &kp RCTRL   &kp bspc_del   &mo 2          &macro_quotes  &macro_dquotes  &macro_brackets  &macro_braces  &mt LGUI RPAR
             >;
         };       
 
