@@ -68,7 +68,7 @@
         layer_Symbols {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                         &trans                                                  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &kp EXCL  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PRCNT        &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &kp EXCL  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PRCNT        &trans                                                  &trans  &kp CARET  &kp AMPS  &kp STAR  &kp QMARK  &kp DQT &trans
  &trans  &kp PLUS  &kp MINUS  &kp STAR  &kp SLASH  &kp EQUAL            &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &kp LT  &kp PIPE  &kp GT  &kp BSLH &kp DQT  &kp UNDER                          &trans                  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans                                 &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
