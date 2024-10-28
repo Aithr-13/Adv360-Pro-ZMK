@@ -4,7 +4,7 @@ label = "macro_nvim";
 #binding-cells = <0>;
 bindings = <&kp N>, <&kp V>, <&kp I>, <&kp M>, <&kp SPACE>, <&kp PERIOD>;
 };
-macro_nvim: macro_spotligt{
+macro_spotlight: macro_spotligt{
 compatible = "zmk,behavior-macro";
 label = "macro_spotlight";
 #binding-cells = <0>;
