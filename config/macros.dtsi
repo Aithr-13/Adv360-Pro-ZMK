@@ -32,13 +32,13 @@ macro_forward: macro_forward{
 compatible = "zmk,behavior-macro";
 label = "macro_forward";
 #binding-cells = <0>;
-bindings = <&macro_press &kp LCTRL, &kp RIGHT>;
+bindings = <&macro_press &kp LCTRL &kp RIGHT>;
 };
 macro_back: macro_back{
 compatible = "zmk,behavior-macro";
 label = "macro_back";
 #binding-cells = <0>;
-bindings = <&macro_press &kp LCTRL, &kp LEFT>;
+bindings = <&macro_press &kp LCTRL  &kp LEFT>;
 };
 macro_super: macro_super{
 compatible = "zmk,behavior-macro";
