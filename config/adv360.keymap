@@ -47,11 +47,11 @@
 
         default_layer {
             bindings = <
-             &kp GRAVE     &kp N1      &kp N2    &kp N3     &kp N4  &kp N5                    &none                                                                            &mo layer_mod  &kp N6         &kp N7          &kp N8           &kp N9         &kp N0       &kp MINUS
+             &kp GRAVE     &kp N1      &kp N2    &kp N3     &kp N4  &kp N5                    &tog 3                                                                            &mo layer_mod  &kp N6         &kp N7          &kp N8           &kp N9         &kp N0       &kp MINUS
              &kp ESC      &kp Q       &kp W     &kp E      &kp R   &kp T              &key_repeat                                                                            &none   &kp Y          &kp U           &kp I            &kp O          &kp P        &kp BSLH
              &kp TAB      &kp A       &kp S     &kp D      &kp F   &kp G            &macro_if_err  &macro_super  &kp LEFT_GUI                  &macro_back  &macro_forward   &none   &kp H          &kp J           &kp K            &kp L       &kp SEMI         &kp SQT
            &kp LSHFT      &kp Z       &kp X     &kp C      &kp V   &kp B                                         &kp LEFT_ALT                  &key_repeat                           &kp N          &kp M       &kp COMMA          &kp DOT       &kp FSLH       &kp RSHFT
-      &mt LCTRL LPAR  &kp GRAVE  &kp K_CUT  &kp K_COPY  &kp K_PASTE                            &mo 2     &kp SPACE     &kp ENTER                      &kp DEL   &kp BACKSPACE   &mo 3          &macro_quotes  &macro_dquotes  &macro_brackets  &macro_braces  &mt RCTRL RPAR
+      &mt LCTRL LPAR  &kp GRAVE  &kp K_CUT  &kp K_COPY  &kp K_PASTE                            &mo 1     &kp SPACE     &kp ENTER                      &kp DEL   &kp BACKSPACE   &mo 2         &macro_quotes  &macro_dquotes  &macro_brackets  &macro_braces  &mt RCTRL RPAR
             >;
         };
        
@@ -95,7 +95,6 @@
   &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &tog 0
             >;
         };
-
 
 
     };
