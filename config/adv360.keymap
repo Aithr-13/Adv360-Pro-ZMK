@@ -67,7 +67,7 @@ layer_Symbols {
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                         &trans                                                  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &kp EXCL  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PRCNT        &trans                                                  &trans  &kp CARET  &kp AMPS  &kp STAR  &kp QMARK  &kp DQT &trans
  &trans  &kp PLUS  &kp MINUS  &kp STAR  &kp SLASH  &kp EQUAL            &trans  &trans  &trans                  &trans  &trans  &trans  &kp PIPE  &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &trans
- &trans  &kp LT  &kp PIPE  &kp AMPS  &kp UNDER &kp GT &kp BSLH                          &trans                  &trans                  &macro_not_eq  &macro_eq_comp &kp GRAVE  &kp K_UNDO  &kp K_REDO &trans
+ &trans  &kp LT  &kp PIPE  &kp AMPS  &kp UNDER &kp GT &kp BSLH                          &trans                  &trans                  &macro_not_eq  &macro_eq_comp &kp GRAVE  &trans  &trans &trans
  &trans  &trans  &trans  &trans  &trans                                 &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
