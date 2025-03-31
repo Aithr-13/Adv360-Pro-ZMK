@@ -1,0 +1,6 @@
+# Main Kconfig for user configuration
+
+# Pull in Kconfig definitions from subdirectories
+source "behaviors/Kconfig"
+
+# Add other 'source' lines here if you add more Kconfig files later
