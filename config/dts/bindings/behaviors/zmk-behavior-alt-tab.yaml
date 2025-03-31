@@ -19,7 +19,3 @@ properties:
     # default: 250
     description: Delay in milliseconds before releasing Alt after key release. Overrides C default if set.
 
-# Since #binding-cells = <0>, we describe that here.
-# This section tells the compiler this behavior takes no parameters like keycodes.
-binding-cells:
-  - usage
