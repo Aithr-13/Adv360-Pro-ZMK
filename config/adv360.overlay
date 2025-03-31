@@ -1,0 +1,29 @@
+#include <behaviors.dtsi> // Make sure this is included at the top
+
+/ {
+    behaviors {
+        // Define the behavior node
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-alt-tab"; // Matches DT_DRV_COMPAT in C code
+            label = "ALT_TAB_BEHAVIOR";
+            #binding-cells = <0>; // This behavior doesn't take parameters like keycodes
+
+            // Optional: Default release delay (can be overridden per key)
+            // release-ms = <250>;
+        };
+    };
+
+    // Optional: Define specific key overrides if needed
+    // keymap {
+    //     compatible = "zmk,keymap";
+
+    //     default_layer { // Or your desired layer
+    //         bindings = <
+    //             // Example: Assign to key at position 5 (index starts from 0)
+    //             &alt_tab K5
+    //             // Example: Override release delay for key at position 10
+    //             &alt_tab K10(release_ms = <300>)
+    //         >;
+    //     };
+    // };
+};
