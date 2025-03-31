@@ -5,7 +5,6 @@
         // Define the behavior node
         alt_tab: alt_tab {
             compatible = "zmk,behavior-alt-tab"; // Matches DT_DRV_COMPAT in C code
-            label = "ALT_TAB_BEHAVIOR";
             #binding-cells = <0>; // This behavior doesn't take parameters like keycodes
 
             // Optional: Default release delay (can be overridden per key)
