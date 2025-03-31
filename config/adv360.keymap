@@ -10,11 +10,9 @@
  */
 
 #define default_layer 0
-#define layer_Symbols 1
-#define layer_Navigation 2
-#define layer_mac 3
-#define layer_keypad 4
-#define layer_mod 5
+#define layer_symbols 1
+#define layer_nav 2
+#define layer_settings 3
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
@@ -70,7 +68,7 @@
             >;
         };
 
-        layer_Navigation {
+        layer_nav {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans         &trans     &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &trans  &trans
@@ -80,7 +78,7 @@
             >;
         };
 
-        layer_mod {
+        layer_settings {
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
