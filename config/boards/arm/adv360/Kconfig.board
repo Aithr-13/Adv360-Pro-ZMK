@@ -15,7 +15,6 @@ config BOARD_ADV360_RIGHT
 # Custom behavior
 config ZMK_BEHAVIOR_ALT_TAB
     bool "Enable custom Alt-Tab behavior"
-    default y # Enable by default for this board
     help
       Enables the custom C behavior for Alt-Tab functionality
       with timed release.
