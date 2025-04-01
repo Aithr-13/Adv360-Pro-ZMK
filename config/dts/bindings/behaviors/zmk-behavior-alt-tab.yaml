@@ -2,24 +2,40 @@
 # SPDX-License-Identifier: MIT
 
 description: |
-  Alt-Tab behavior with configurable release delay.
+  Custom Alt-Tab behavior with configurable release delay for ZMK.
+  Holds Alt while the key is pressed, taps Tab on initial press and subsequent presses,
+  and releases Alt after a configurable delay when the key is released.
 
-  Example:
-    alt_tab: my_alt_tab {
-        compatible = "zmk,behavior-alt-tab";
-        #binding-cells = <0>;
-        release-ms = <500>; // Optional: milliseconds to wait before releasing Alt
+  Example Usage in DeviceTree (.dtsi or .overlay):
+    #include <behaviors.dtsi> // If needed for other behaviors
+
+    / {
+        behaviors {
+            // Create an instance named 'alt_tab'
+            alt_tab: behavior_alt_tab {
+                compatible = "zmk,behavior-alt-tab";
+                #binding-cells = <0>; // This behavior takes no parameters from the keymap binding
+                // Optional property: override default release delay
+                release-ms = <500>;
+            };
+        };
     };
 
-compatible: "zmk,behavior-alt-tab"
+compatible: "zmk,behavior-alt-tab"  # Must match DT_DRV_COMPAT in your C code
 
+# This behavior takes no parameters from the keymap binding itself.
+# Its configuration comes from properties on its DeviceTree node.
 binding-cells:
-  - name # Name of the binding cell (always 0 for behaviors triggered by keys)
 
 properties:
-  label: # This seems weird that it being blank would work but ok
+  release-ms:
     type: int
     required: false
-    default: 250 # Default value if not specified in the .dtsi file
+    default: 250 # Default value if not specified in the .dtsi instance
     description: |
-      Time in milliseconds to wait after key release before releasing the Alt modifier.
+      Time in milliseconds to wait after the behavior's key is released
+      before automatically releasing the Left Alt modifier.
+
+# Note: The standard 'label' property definition has been intentionally
+# omitted here as a workaround for a previous build error related to
+# type mismatches during DeviceTree processing.
