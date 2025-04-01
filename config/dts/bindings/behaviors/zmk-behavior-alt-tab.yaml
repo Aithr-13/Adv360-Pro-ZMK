@@ -17,7 +17,7 @@ binding-cells:
   - name # Name of the binding cell (always 0 for behaviors triggered by keys)
 
 properties:
-  release-ms:
+  label: # This seems weird that it being blank would work but ok
     type: int
     required: false
     default: 250 # Default value if not specified in the .dtsi file
