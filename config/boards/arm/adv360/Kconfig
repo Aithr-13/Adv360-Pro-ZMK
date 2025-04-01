@@ -4,3 +4,11 @@ config BOARD_ENABLE_DCDC
     select SOC_DCDC_NRF52X
     default y
     depends on BOARD_ADV360_LEFT || BOARD_ADV360_RIGHT
+
+config ZMK_BEHAVIOR_ALT_TAB
+    default y
+    bool "Alt-Tab Custom Behavior"
+    depends on ZMK_BEHAVIORS
+    help
+      Enables the custom Alt-Tab behavior which holds Alt and sends Tab on taps.
+
