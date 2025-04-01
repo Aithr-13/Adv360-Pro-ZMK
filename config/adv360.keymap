@@ -25,6 +25,7 @@
     behaviors {
         #include "macros.dtsi"
         #include "version.dtsi"
+
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -51,11 +52,11 @@
         base {
             display-name = "Base";
             bindings = <
-&kp EQUAL                   &kp N1             &kp N2              &kp N3          &kp N4            &kp N5  &kp CAPS                                                                &mo 3              &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp ESCAPE                  &kp Q              &kp W               &kp E           &kp R             &kp T   &kp GRAVE                                                               &kp TILDE          &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp TAB                     &hm LEFT_ALT APOS  &hm LEFT_CONTROL S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G   &kp LEFT_BRACKET  &none    &kp LALT          &kp LGUI    &alt_tab          &kp RIGHT_BRACKET  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT                   &kp Z              &kp X               &kp C           &kp V             &kp B                              &kp LEFT_GUI      &kp DELETE                                    &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mt LCTRL LEFT_PARENTHESIS  &kp GRAVE          &kp K_CUT           &kp K_COPY      &kp K_PASTE               &mo 1             &kp DEL  &kp ENTER         &kp PG_DN   &kp BACKSPACE  &mo 2                      &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mt RALT RPAR
+&kp EQUAL                   &kp N1          &kp N2              &kp N3          &kp N4            &kp N5  &kp CAPS                                                                    &mo 3              &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp ESCAPE                  &kp Q           &kp W               &kp E           &kp R             &kp T   &kp GRAVE                                                                   &kp TILDE          &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp TAB                     &hm LEFT_ALT A  &hm LEFT_CONTROL S  &mt LEFT_GUI D  &mt LEFT_SHIFT F  &kp G   &kp LEFT_BRACKET  &none      &none             &none         &alt_tab       &kp RIGHT_BRACKET  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT                   &kp Z           &kp X               &kp C           &kp V             &kp B                                &kp LEFT_GUI      &kp DELETE                                      &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mt LCTRL LEFT_PARENTHESIS  &kp GRAVE       &kp K_CUT           &kp K_COPY      &kp K_PASTE               &mo 1             &kp SPACE  &kp ENTER         &kp LEFT_ALT  &kp BACKSPACE  &mo 2                      &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mt RALT RPAR
             >;
         };
 
