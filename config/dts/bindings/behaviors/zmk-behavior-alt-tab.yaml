@@ -21,7 +21,7 @@ description: |
         };
     };
 
-compatible: "zmk,behavior-alt-tab"  # Must match DT_DRV_COMPAT in your C code
+compatible: "zmk,behavior-alt-tab" # Must match DT_DRV_COMPAT in your C code
 
 # This behavior takes no parameters from the keymap binding itself.
 # Its configuration comes from properties on its DeviceTree node.
