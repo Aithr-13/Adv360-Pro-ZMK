@@ -1,8 +1,0 @@
-# Kconfig for Custom Behaviors
-
-config ZMK_BEHAVIOR_ALT_TAB
-    default y
-    bool "Alt-Tab Custom Behavior"
-    depends on ZMK_BEHAVIORS
-    help
-      Enables the custom Alt-Tab behavior which holds Alt and sends Tab on taps.
