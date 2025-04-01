@@ -10,3 +10,12 @@ config BOARD_ADV360_LEFT
 config BOARD_ADV360_RIGHT
     bool "adv360_right"
     depends on SOC_NRF52840_QIAA
+# Inside config/boards/arm/adv360/Kconfig.board (or Kconfig)
+
+# Custom behavior
+config ZMK_BEHAVIOR_ALT_TAB
+    bool "Enable custom Alt-Tab behavior"
+    default y # Enable by default for this board
+    help
+      Enables the custom C behavior for Alt-Tab functionality
+      with timed release.

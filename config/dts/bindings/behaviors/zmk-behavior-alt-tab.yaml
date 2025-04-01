@@ -1,21 +1,25 @@
+# Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
+
 description: |
-  Custom Alt-Tab behavior for ZMK.
+  Alt-Tab behavior with configurable release delay.
 
-  Holds Alt, sends Tab on tap, releases Alt after a delay specified by release-ms.
+  Example:
+    alt_tab: my_alt_tab {
+        compatible = "zmk,behavior-alt-tab";
+        #binding-cells = <0>;
+        release-ms = <500>; // Optional: milliseconds to wait before releasing Alt
+    };
 
-compatible: "zmk,behavior-alt-tab" # Must exactly match the DT node and C code DT_DRV_COMPAT
+compatible: "zmk,behavior-alt-tab"
+
+binding-cells:
+  - name # Name of the binding cell (always 0 for behaviors triggered by keys)
 
 properties:
-  label:
-    type: string
-    required: false
-    description: Human readable string label for the behavior instance.
-
   release-ms:
     type: int
     required: false
-    # Default is handled in C code, but can be documented here
-    # default: 250
-    description: Delay in milliseconds before releasing Alt after key release. Overrides C default if set.
-
+    default: 250 # Default value if not specified in the .dtsi file
+    description: |
+      Time in milliseconds to wait after key release before releasing the Alt modifier.

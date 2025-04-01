@@ -33,6 +33,18 @@
         zmk,underglow = &led_strip;
     };
 
+behaviors {
+        alt_tab: behavior_alt_tab {
+            compatible = "zmk,behavior-alt-tab"; // Matches DT_DRV_COMPAT in alt-tab.c
+            #binding-cells = <0>;
+            label = "ALT_TAB_CUSTOM";           // Descriptive label for ZMK
+            release-ms = <250>;                 // Default delay (adjust if needed)
+                                                // Matches DT_INST_PROP_OR in C code
+                                                // Property name uses '-'
+        };                                      // End of alt_tab block
+    };                                          // End of behaviors block
+
+
     matrix_transform0: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <20>;
